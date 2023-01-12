@@ -13,7 +13,16 @@ This folder contains example Terraform configuration that define a module for de
   - terraform plan 
   - terraform apply 
   - terraform destroy
+  
+ **For Dev/test Stage Commands to be used**
+ 
+ Dev stage
+  
+  - terraform plan -var-file="dev.tfvars"
+  - terraform apply -var-file="dev.tfvars"
+ Test stage
+ 
+  - terraform plan -var-file="test.tfvars"
+  - terraform apply -var-file="test.tfvars"
+ 
 
-**Architecture diagram**
-
-<img width="477" alt="Screenshot 2021-06-01 at 16 39 07" src="https://user-images.githubusercontent.com/52453070/120351713-01095980-c2f8-11eb-8087-de1c0ca1f1f5.png">
