@@ -1,5 +1,4 @@
 ## creating instances
-
 resource "aws_instance" "sk"{
   ami                    = var.ami_version
   instance_type          = var.instance_type
