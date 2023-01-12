@@ -1,5 +1,6 @@
 ## creating instances
-resource "aws_instance" "base"{
+
+resource "aws_instance" "sk"{
   ami                    = var.ami_version
   instance_type          = var.instance_type
   count                  = var.no-of-instances
@@ -104,21 +105,6 @@ ingress {
     to_port         = 0
     protocol        = "-1"
     cidr_blocks     = ["0.0.0.0/0"]
-  }
-}
-
-## creating instances
-resource "aws_instance" "base"{
-  ami                    = var.ami_version
-  instance_type          = var.instance_type
-  count                  = var.no-of-instances
-  key_name               = var.key_name
-  # security_groups        = ["${aws_security_group.webservers.id}"]
-  vpc_security_group_ids = ["${aws_security_group.webservers.id}"]
-  subnet_id              = aws_subnet.subnet1[count.index].id
-  user_data              = "${file("user_data.sh")}"
-  tags ={
-    Name = "sbktest${count.index}"
   }
 }
 
