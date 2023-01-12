@@ -14,13 +14,14 @@ This folder contains example Terraform configuration that define a module for de
   - terraform apply 
   - terraform destroy
   
- **For Dev/test Stage Commands to be used**
+ **For dev Stage Commands to be used**
  
  Dev stage
   
   - terraform plan -var-file="dev.tfvars"
   - terraform apply -var-file="dev.tfvars"
- Test stage
+  
+  **For test Stage Commands to be used**
  
   - terraform plan -var-file="test.tfvars"
   - terraform apply -var-file="test.tfvars"
