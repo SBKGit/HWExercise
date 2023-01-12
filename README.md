@@ -8,6 +8,7 @@ This folder contains example Terraform configuration that define a module for de
 
 **Commands to be used**
 
+  - rm -Rf .terraform
   - terraform init 
   - terraform plan 
   - terraform apply 
